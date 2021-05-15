@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+ <head>
+     <title>Image Caption Bot</title>
+ </head>   
+<body>
+    <h1>Image Captioning</h1>
+
+    <form method="POST" action="/" enctype="multipart/form-data">
+        <input type="file" name="userfile" placeholder="Your Image">
+        <input type="submit">
+
+    </form>
+    {% if result_dict %}
+
+        <img src="{{result_dict['image']}}">
+        <br>
+        <h1>Generated Caption : <i>{{result_dict['caption']}}</i></h1>
+    {% endif %}
+</body>
+</html>
